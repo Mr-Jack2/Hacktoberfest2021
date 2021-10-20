@@ -1,0 +1,29 @@
+https://trainingcenter.cloud.ufps.edu.co/problemas/459/detalle/es
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int caso;cin>>caso;
+	while(caso--){
+		long long n=0,k=0,ans=0,best=0;
+		cin>>n>>k;
+		long long valor[n];
+		long long peso[n];
+		for(int i=0;i<n;i++) cin>>peso[i];
+		for(int i=0;i<n;i++) cin>>valor[i];
+		for(int i=0;i<(1<<n);i++){
+			long long sp=0,sv=0;
+			for(int j=0;j<n;j++){
+				if(i&(1<<j)){
+					sp+=peso[j];
+					sv+=valor[j];
+				}
+			}
+			if(sp<=k){
+				best=max(best,sv);
+			}
+		}
+  		cout<<best<<endl;
+	}
+}
