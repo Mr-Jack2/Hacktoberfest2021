@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int sidea, sideb,sidec;
+    cout<<"Enter three sides of traingle";
+    cin>>sidea>>sideb>>sidec;
+
+    if(sidea==sideb&&sideb==sidec){
+        cout<<"Traingle is equilateral"<<endl;
+    }else if(sidea==sideb||sideb==sidec||sidec==sidea){
+    cout<<"Traingle is isosceles "<<endl;
+    }else{
+    cout<<"Traingle is scalar"<<endl;
+    }
+
+    return 0;
+}
